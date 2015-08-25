@@ -45,3 +45,5 @@
 ### Great Resources
 - [Learn HTML & CSS](http://learn.shayhowe.com/html-css/)
 - [Learn CSS Layout](http://learnlayout.com/)
+- [HTML Living Standard - WHATWG](https://html.spec.whatwg.org/multipage/semantics.html)
+- [CSS Selectors Reference](http://www.w3schools.com/cssref/css_selectors.asp)
