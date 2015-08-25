@@ -28,7 +28,7 @@
 
 5 Style embedded media / forms
 
-### CSS Layout [learnlayout.com](learnlayout.com)
+### CSS Layout - [learnlayout.com](learnlayout.com)
 - ```display``` property
 - block level elements take up full width of parent by default, unless you set ```width```
 	- after setting width you can set ```margin: 0 auto``` to horizontally center the element inside its parent
