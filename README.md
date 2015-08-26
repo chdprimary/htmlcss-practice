@@ -43,7 +43,7 @@
 - ```flexbox```
 
 ### Sass
-- $<var-name>: <var-val>
+- $var-name: var-val
 - nesting
 - @imports let you import "partials" (partial css files) to reduce number of HTTP requests (CSS file consolidation)
 
@@ -60,9 +60,9 @@
 	- consolidate CSS/JS resources
 	- use image sprites
 	- gzip content (browsers understand gzipped content)
-	- place <script> tags at bottom of <body>
+	- place ```<script>``` tags at bottom of ```<body>```
 - How to avoid FOUC?
-	- Put ```display: none``` on page elements until <script> near </body> executes, unhiding them.
+	- Put ```display: none``` on page elements until ```<script>``` near ```</body>``` executes, unhiding them.
 - What does CORS stand for and what issue does it address?
 	- Cross-Origin Resource Sharing, allows people to make restricted AJAX requests for resources on another domain. Partial solution to same-origin policy issue.
 
