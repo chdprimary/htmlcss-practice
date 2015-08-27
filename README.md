@@ -94,17 +94,24 @@
 	- meaning `1.5em`, if no font-size is specified, will resolve to `24px`
 
 ##### JS Stuff
-* Explain event delegation
-	* Add event listener to parent element (e.g. ul), check e.target for which child element bubbled up
+=========
+this
+=========
 * Explain how `this` works in JavaScript
 	* refers to "antecedent object"
 	* global context: refers to `window`
 	* inside function or method scope: refers to most immediate object reference in call chain
 	* inside event handler: refers to node object the event listener is attached to (makes sense)
 * What's the difference between `.call` and `.apply`?
+	* `.apply` lets you specify `this`, optionally specify array of arguments, then executes the funtion
+	* `.call` lets you specify `this`, optionally specify individual arguments, then executes the function
 * Explain `Function.prototype.bind`.
+	* `.bind` lets you specify `this`, optionally specify individual arguments, and returns a function to be called later
+=========
+Objects
+=========
 * Explain how prototypal inheritance works
-	*  
+	* 
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between host objects and native objects?
 * Why is extending built-in JavaScript objects not a good idea?
@@ -112,24 +119,37 @@
   * What is an example of an immutable object in JavaScript?
   * What are the pros and cons of immutability?
   * How can you achieve immutability in your own code?
+=========
+Language
+=========
+* Explain event delegation
+	* Add event listener to parent element (e.g. ul), check e.target for which child element bubbled up
+* When would you use `document.write()`?
+	* Almost never, not sure of a good use case for that.
+* Have you ever used JavaScript templating?
+	* No
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
 	* `(function() { ... } ())` Crockford recommends this one
 	* `(function() { ... } )()` But this one works just as well
+* What is `"use strict";`? what are the advantages and disadvantages to using it?
+	* Enables strict parsing of javascript. Throws more errors, encouraging better coding practices. Makes language more stable. Many benefits. Almost universally agreed to be good. 
+	* Disadvantages? Libraries using strict mode might not work well with non-strict code. Additionally, any errors from incompatibility will fail silently.
+* What tools and techniques do you use debugging JavaScript code?
+	* Chrome Web Inspector. Node? Node Debug or Node Inspector. Ember? Ember Inspector. Optimize? JSLint. JSHint. JSPerf.
+* What language constructions do you use for iterating over object properties and array items?
+	* Object properties? Object.keys(obj). Array Items? arr.forEach(func).
+* Explain the difference between synchronous and asynchronous functions.
+* Explain "hoisting".
+* Describe event bubbling.
 * What do you think of AMD vs CommonJS?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
   * How would you go about checking for any of these states?
 * What is a closure, and how/why would you use one?
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
-* When would you use `document.write()`?
-	* Almost never, not sure of a good use case for that.
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain AJAX in as much detail as possible.
 * Explain how JSONP works (and how it's not really AJAX).
-* Have you ever used JavaScript templating?
-	* No
-* Explain "hoisting".
-* Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
 * Difference between document load event and document ready event?
 * Explain the same-origin policy with regards to JavaScript.
@@ -137,9 +157,6 @@
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
-* What is `"use strict";`? what are the advantages and disadvantages to using it?
-	* Enables strict parsing of javascript. Throws more errors, encouraging better coding practices. Makes language more stable. Many benefits. Almost universally agreed to be good. 
-	* Disadvantages? Libraries using strict mode might not work well with non-strict code. Additionally, any errors from incompatibility will fail silently.
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
@@ -147,11 +164,6 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What is the extent of your experience with Promises and/or their polyfills?
 * What are the pros and cons of using Promises instead of callbacks?
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
-* What tools and techniques do you use debugging JavaScript code?
-	* Chrome Web Inspector. Node? Node Debug or Node Inspector. Ember? Ember Inspector. Optimize? JSLint. JSHint. JSPerf.
-* What language constructions do you use for iterating over object properties and array items?
-	* Object properties? Object.keys(obj). Array Items? arr.forEach(func).
-* Explain the difference between synchronous and asynchronous functions.
 * What is event loop?
   * What is the difference between call stack and task queue?
 
