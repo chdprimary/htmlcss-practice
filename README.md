@@ -65,6 +65,32 @@
 	- Put ```display: none``` on page elements until ```<script>``` near ```</body>``` executes, unhiding them.
 - What does CORS stand for and what issue does it address?
 	- Cross-Origin Resource Sharing, allows people to make restricted AJAX requests for resources on another domain. Partial solution to same-origin policy issue.
+- What does a ```doctype``` do?
+	- Tells the browser which standard to render the HTML as
+- What's the difference between standards mode and quirks mode?
+	- Browser modes. Standards mode renders according to standards. Quirks mode is used for old web pages and adds "intuitive functionality".
+- What's the difference between HTML and XHTML?
+	- XHTML is more strict, and less commonly used. Most contemporary sites use HTML5 by default (```<!DOCTYPE html>```)
+- What are data-* attributes good for?
+	- You can attach misc non-visual information to HTML tags, and easily access them from JavaScript. They tags may be named anything so long as they begin with "data-"
+- Describe the difference between a cookie, sessionStorage and localStorage.
+	- all are client-side storage
+	- cookies are 4K old-school name-value pairs, sessionStorage is larger & tab-scoped, localStorage is also larger & domain-scoped.
+- Describe the difference between ```<script>```, ```<script async>``` and ```<script defer>```.
+	- Normal ```<script>``` will pause HTML parsing
+	- async and defer begin downloading as soon as encountered, but don't pause the parser
+	- defer scripts execute only after DOM is completely loaded, still execute in order specified in markup, even if the downloads complete out of order
+	- async scripts execute as soon as finished, regardless of script specification order or whether DOM is finished loading or not
+- What's the difference between "resetting" and "normalizing" CSS? 
+	- Normalize.css iss more complex, doesn't unstyle everything (just "unuseful" default styles), and requires more attention
+	- CSS reset is more "quick-and-dirty"
+- What's the difference between inline and inline-block?
+	- [answer](http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
+- Describe pseudo-elements and discuss what they are used for.
+	- psuedo elements such as ```::before``` and ```::after``` can be used for many different things. They are both attached to each element on the page. They are inline by default. They allow you to add / manipulate styles before and/or after each element.
+- What are some of the "gotchas" for writing efficient CSS?
+	- avoid selectors that may match a large number of items (e.g. tag selectors) and minimize redundant selectors.
+- 
 
 ### Great Resources
 - [Learn HTML & CSS](http://learn.shayhowe.com/html-css/)
@@ -72,3 +98,6 @@
 - [HTML Living Standard - WHATWG](https://html.spec.whatwg.org/multipage/semantics.html)
 - [CSS Selectors Reference](http://www.w3schools.com/cssref/css_selectors.asp)
 - [Website Performance Optimizations](http://www.sitepoint.com/web-site-optimization-steps/)
+
+What excites or interests you about coding?
+- data visualization project
