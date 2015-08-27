@@ -39,7 +39,7 @@
 - ```position``` can be ```static```(default), ```relative```(can use top,bottom,left,right), ```fixed```(fixed in viewport even when scrolling), or ```absolute```(positioned relative to nearest non-static ancestor)
 - ```floats``` and ```clears``` and ```clearfixing```
 - ```@media``` queries
-	- e.g. ```@media screen and max-width:599px {```
+	- e.g. ```@media screen and max-width:599px { ...```
 - ```flexbox```
 
 ### Sass
@@ -90,44 +90,56 @@
 	- psuedo elements such as ```::before``` and ```::after``` can be used for many different things. They are both attached to each element on the page. They are inline by default. They allow you to add / manipulate styles before and/or after each element.
 - What are some of the "gotchas" for writing efficient CSS?
 	- avoid selectors that may match a large number of items (e.g. tag selectors) and minimize redundant selectors.
+- Default font size in Chrome, if not specified, as of 8/27/15, is **16px**
+	- meaning `1.5em`, if no font-size is specified, will resolve to `24px`
 
 ##### JS Stuff
 * Explain event delegation
 	* Add event listener to parent element (e.g. ul), check e.target for which child element bubbled up
 * Explain how `this` works in JavaScript
-	* 
+	* refers to "antecedent object"
+	* global context: refers to `window`
+	* inside function or method scope: refers to most immediate object reference in call chain
+	* inside event handler: refers to node object the event listener is attached to (makes sense)
+* What's the difference between `.call` and `.apply`?
+* Explain `Function.prototype.bind`.
 * Explain how prototypal inheritance works
-* What do you think of AMD vs CommonJS?
+	*  
+* Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+* What's the difference between host objects and native objects?
+* Why is extending built-in JavaScript objects not a good idea?
+* Explain the difference between mutable and immutable objects.
+  * What is an example of an immutable object in JavaScript?
+  * What are the pros and cons of immutability?
+  * How can you achieve immutability in your own code?
 * Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
-  * What needs to be changed to properly make it an IIFE?
+	* `(function() { ... } ())` Crockford recommends this one
+	* `(function() { ... } )()` But this one works just as well
+* What do you think of AMD vs CommonJS?
 * What's the difference between a variable that is: `null`, `undefined` or undeclared?
   * How would you go about checking for any of these states?
 * What is a closure, and how/why would you use one?
 * What's a typical use case for anonymous functions?
 * How do you organize your code? (module pattern, classical inheritance?)
-* What's the difference between host objects and native objects?
-* Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
-* What's the difference between `.call` and `.apply`?
-* Explain `Function.prototype.bind`.
 * When would you use `document.write()`?
+	* Almost never, not sure of a good use case for that.
 * What's the difference between feature detection, feature inference, and using the UA string?
 * Explain AJAX in as much detail as possible.
 * Explain how JSONP works (and how it's not really AJAX).
 * Have you ever used JavaScript templating?
-  * If so, what libraries have you used?
+	* No
 * Explain "hoisting".
 * Describe event bubbling.
 * What's the difference between an "attribute" and a "property"?
-* Why is extending built-in JavaScript objects not a good idea?
 * Difference between document load event and document ready event?
-* What is the difference between `==` and `===`?
 * Explain the same-origin policy with regards to JavaScript.
 * Make this work:
 ```javascript
 duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 ```
-* Why is it called a Ternary expression, what does the word "Ternary" indicate?
 * What is `"use strict";`? what are the advantages and disadvantages to using it?
+	* Enables strict parsing of javascript. Throws more errors, encouraging better coding practices. Makes language more stable. Many benefits. Almost universally agreed to be good. 
+	* Disadvantages? Libraries using strict mode might not work well with non-strict code. Additionally, any errors from incompatibility will fail silently.
 * Create a for loop that iterates up to `100` while outputting **"fizz"** at multiples of `3`, **"buzz"** at multiples of `5` and **"fizzbuzz"** at multiples of `3` and `5`
 * Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
 * Why would you use something like the `load` event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
@@ -136,11 +148,9 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What are the pros and cons of using Promises instead of callbacks?
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What tools and techniques do you use debugging JavaScript code?
+	* Chrome Web Inspector. Node? Node Debug or Node Inspector. Ember? Ember Inspector. Optimize? JSLint. JSHint. JSPerf.
 * What language constructions do you use for iterating over object properties and array items?
-* Explain the difference between mutable and immutable objects.
-  * What is an example of an immutable object in JavaScript?
-  * What are the pros and cons of immutability?
-  * How can you achieve immutability in your own code?
+	* Object properties? Object.keys(obj). Array Items? arr.forEach(func).
 * Explain the difference between synchronous and asynchronous functions.
 * What is event loop?
   * What is the difference between call stack and task queue?
