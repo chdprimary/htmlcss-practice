@@ -94,9 +94,7 @@
 	- meaning `1.5em`, if no font-size is specified, will resolve to `24px`
 
 ##### JS Stuff
-=========
-this
-=========
+###### this
 * Explain how `this` works in JavaScript
 	* refers to "antecedent object"
 	* global context: refers to `window`
@@ -107,11 +105,9 @@ this
 	* `.call` lets you specify `this`, optionally specify individual arguments, then executes the function
 * Explain `Function.prototype.bind`.
 	* `.bind` lets you specify `this`, optionally specify individual arguments, and returns a function to be called later
-=========
-Objects
-=========
+
+###### Objects
 * Explain how prototypal inheritance works
-	* 
 * Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 * What's the difference between host objects and native objects?
 * Why is extending built-in JavaScript objects not a good idea?
@@ -119,9 +115,8 @@ Objects
   * What is an example of an immutable object in JavaScript?
   * What are the pros and cons of immutability?
   * How can you achieve immutability in your own code?
-=========
-Language
-=========
+
+###### Language
 * Explain event delegation
 	* Add event listener to parent element (e.g. ul), check e.target for which child element bubbled up
 * When would you use `document.write()`?
@@ -166,8 +161,6 @@ duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
 * What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 * What is event loop?
   * What is the difference between call stack and task queue?
-
-
 
 ### Great Resources
 - [Learn HTML & CSS](http://learn.shayhowe.com/html-css/)
